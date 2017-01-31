@@ -13,7 +13,7 @@ RUN chmod 600 /root/.ssh/id_rsa && \
 	ssh-keyscan iot.iavtech.net >> /root/.ssh/known_hosts && \
 	git clone git@iot.iavtech.net:smartParking && \
 	rm -rf /root/.ssh/id_rsa && \
-	cp -r ./smartParking/01_Crossbar/web/* ./var/www && \
+	cp -r ./smartParking/01_Crossbar/web/* ./usr/share/nginx/html && \
 	rm -rf ./smartParking && \
 	apk del git openssh
 
